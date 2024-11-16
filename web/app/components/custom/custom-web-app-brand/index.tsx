@@ -6,6 +6,7 @@ import {
 } from '@remixicon/react'
 import s from './style.module.css'
 import LogoSite from '@/app/components/base/logo/logo-site'
+import LogoSiteC from '@/app/components/base/logo/logo-site-c'
 import Switch from '@/app/components/base/switch'
 import Button from '@/app/components/base/button'
 import { MessageDotsCircle } from '@/app/components/base/icons/src/vender/solid/communication'

@@ -12,9 +12,11 @@ import EnvNav from './env-nav'
 import ExploreNav from './explore-nav'
 import ToolsNav from './tools-nav'
 import GithubStar from './github-star'
+import LicenseNav from './license-env'
 import { WorkspaceProvider } from '@/context/workspace-context'
 import { useAppContext } from '@/context/app-context'
 import LogoSite from '@/app/components/base/logo/logo-site'
+import LogoSiteC from '@/app/components/base/logo/logo-site-c'
 import useBreakpoints, { MediaType } from '@/hooks/use-breakpoints'
 import { useProviderContext } from '@/context/provider-context'
 import { useModalContext } from '@/context/modal-context'
@@ -57,6 +59,7 @@ const Header = () => {
         </div>}
         {!isMobile && <>
           <Link href="/apps" className='flex items-center mr-4'>
+            <LogoSiteC className='object-contain' /> <span className='title-sm-bold'>&nbsp;X&nbsp;</span> 
             <LogoSite className='object-contain' />
           </Link>
           {/* <GithubStar /> */}
@@ -79,6 +82,7 @@ const Header = () => {
         </div>
       )}
       <div className='flex items-center flex-shrink-0'>
+        <LicenseNav />
         <EnvNav />
         {enableBilling && (
           <div className='mr-3 select-none'>
