@@ -152,10 +152,10 @@ const translation = {
     },
     userSatisfactionRate: {
       title: '使用者滿意度',
-      explanation: '每 1000 條訊息的點贊數。反應了使用者對回答十分滿意的比例。',
+      explanation: '每 1000 條訊息的點讚數。反應了使用者對回答十分滿意的比例。',
     },
     avgResponseTime: {
-      title: '平均響應時間',
+      title: '平均回應時間',
       explanation: '衡量 AI 應用處理和回覆使用者請求所花費的平均時間，單位為毫秒，反映效能和使用者體驗。僅在文字型應用提供。',
     },
     tps: {

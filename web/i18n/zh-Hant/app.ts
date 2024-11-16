@@ -131,7 +131,7 @@ const translation = {
   importFromDSLUrl: '寄件者 URL',
   importFromDSL: '從 DSL 導入',
   importFromDSLFile: '從 DSL 檔',
-  importFromDSLUrlPlaceholder: '在此處粘貼 DSL 連結',
+  importFromDSLUrlPlaceholder: '在此處貼上 DSL 連結',
 }
 
 export default translation

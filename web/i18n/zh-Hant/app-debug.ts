@@ -25,7 +25,7 @@ const translation = {
     debugConfig: '除錯',
     addFeature: '新增功能',
     automatic: '產生',
-    stopResponding: '停止響應',
+    stopResponding: '停止回應',
     agree: '贊同',
     disagree: '反對',
     cancelAgree: '取消贊同',
@@ -83,7 +83,7 @@ const translation = {
     },
     annotation: {
       title: '標註回覆',
-      description: '啟用後，將標註使用者的回覆，以便在使用者重複提問時快速響應。',
+      description: '啟用後，將標註使用者的回覆，以便在使用者重複提問時快速回應。',
       resDes: '標註回覆已啟用',
       scoreThreshold: {
         title: '分數閾值',
@@ -207,7 +207,7 @@ const translation = {
     nameOfKeyRequired: '變數 {{key}} 對應的名稱必填',
     valueOfVarRequired: '{{key}}必填',
     queryRequired: '主要文字必填',
-    waitForResponse: '請等待上條資訊響應完成',
+    waitForResponse: '請等待上條資訊回應完成',
     waitForBatchResponse: '請等待批次任務完成',
     notSelectModel: '請選擇模型',
     waitForImgUpload: '請等待圖片上傳完成',
@@ -279,7 +279,7 @@ const translation = {
     visionSettings: {
       title: '視覺設定',
       resolution: '解析度',
-      resolutionTooltip: `低解析度模式將使模型接收影象的低解析度版本，尺寸為512 x 512，並使用65 Tokens 來表示影象。這樣可以使API更快地返回響應，並在不需要高細節的用例中消耗更少的輸入。
+      resolutionTooltip: `低解析度模式將使模型接收影象的低解析度版本，尺寸為512 x 512，並使用65 Tokens 來表示影象。這樣可以使API更快地返回回應，並在不需要高細節的用例中消耗更少的輸入。
       \n
       高解析度模式將首先允許模型檢視低解析度影象，然後根據輸入影象的大小建立512畫素的詳細裁剪影象。每個詳細裁剪影象使用兩倍的預算總共為129 Tokens。`,
       high: '高',
