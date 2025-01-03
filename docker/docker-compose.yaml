@@ -390,6 +390,17 @@ x-shared-env: &shared-api-worker-env
   HTTPS_PROXY: ${HTTPS_PROXY:-}
 
 services:
+  ollama:
+    image: ollama/ollama:0.4.7
+    ports:
+      - "11434:11434"  
+    environment:
+      - OLLAMA_KEEP_ALIVE=-1
+    volumes:
+      - ./volumes/ollama/data:/root/.ollama
+    networks:
+      - ssrf_proxy_network
+
   openldap:
     image: bitnami/openldap:latest
     ports:
@@ -398,8 +409,8 @@ services:
     environment:
       - LDAP_ADMIN_USERNAME=admin
       - LDAP_ADMIN_PASSWORD=admin
-      - LDAP_USERS=langflow_usr,skipandsnow,test
-      - LDAP_PASSWORDS=langflow_usr,skipandsnow0,test
+      - LDAP_USERS=langflow_usr,skipandsnow,test,shrharry
+      - LDAP_PASSWORDS=langflow_usr,skipandsnow0,test,shrharry840808
       - LDAP_ROOT=dc=example,dc=org
       - LDAP_ADMIN_DN=cn=admin,dc=example,dc=org
     networks:
@@ -407,7 +418,7 @@ services:
       
   # API service
   api:
-    image: langgenius/dify-api:0.14.0
+    image: langgenius/dify-api:0.14.0c
     restart: always
     environment:
       # Use the shared environment variables.
@@ -432,7 +443,7 @@ services:
   # worker service
   # The Celery worker for processing the queue.
   worker:
-    image: langgenius/dify-api:0.14.0
+    image: langgenius/dify-api:0.14.0c
     restart: always
     environment:
       # Use the shared environment variables.
@@ -454,7 +465,7 @@ services:
 
   # Frontend web application.
   web:
-    image: langgenius/dify-web:0.14.0
+    image: langgenius/dify-web:0.14.0c
     restart: always
     environment:
       CONSOLE_API_URL: ${CONSOLE_API_URL:-}

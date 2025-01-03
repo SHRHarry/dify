@@ -61,10 +61,11 @@ const Header = () => {
         </div>}
         {!isMobile && <>
           <Link href="/apps" className='flex items-center mr-4'>
-            <LogoSiteC className='object-contain' /> <span className='title-sm-bold'>&nbsp;X&nbsp;</span> 
+            <LogoSiteC className='object-contain' /> <span className='title-sm-bold'>&nbsp;X&nbsp;</span>
             <LogoSite className='object-contain' />
           </Link>
-          {systemFeatures.license.status === LicenseStatus.NONE && {/* <GithubStar />} */}
+          {/* {systemFeatures.license.status === LicenseStatus.NONE && <GithubStar />} */}
+          {systemFeatures.license.status === LicenseStatus.NONE}
         </>}
       </div>
       {isMobile && (

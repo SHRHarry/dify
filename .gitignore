@@ -157,6 +157,7 @@ docker-legacy/volumes/opensearch/data/*
 docker-legacy/volumes/pgvectors/data/*
 docker-legacy/volumes/pgvector/data/*
 
+docker/volumes/ollama/data/*
 docker/volumes/app/storage/*
 docker/volumes/certbot/*
 docker/volumes/db/data/*
